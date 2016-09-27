@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Directs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Directions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @directs.each do |direct| %>
+      <tr>
+        <td><%= direct.Name %></td>
+        <td><%= direct.Directions %></td>
+        <td><%= link_to 'Show', direct %></td>
+        <td><%= link_to 'Edit', edit_direct_path(direct) %></td>
+        <td><%= link_to 'Destroy', direct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Direct', new_direct_path %>

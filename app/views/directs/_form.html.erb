@@ -1,0 +1,27 @@
+<%= form_for(direct) do |f| %>
+  <% if direct.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(direct.errors.count, "error") %> prohibited this direct from being saved:</h2>
+
+      <ul>
+      <% direct.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %>
+    <%= f.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Directions %>
+    <%= f.text_area :Directions %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @direct.Name %>
+</p>
+
+<p>
+  <strong>Directions:</strong>
+  <%= @direct.Directions %>
+</p>
+
+<%= link_to 'Edit', edit_direct_path(@direct) %> |
+<%= link_to 'Back', directs_path %>
